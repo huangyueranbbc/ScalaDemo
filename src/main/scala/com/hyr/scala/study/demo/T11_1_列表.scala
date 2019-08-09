@@ -1,6 +1,7 @@
 package com.hyr.scala.study.demo
 
 /** *****************************************************************************
+  *
   * @date 2019-07-08 13:32
   * @author: <a href=mailto:>黄跃然</a>
   * @Description: 集合-列表
@@ -64,6 +65,16 @@ object T11_1_列表 {
     println(list1.contains(3))
     // 过滤出大于等于2的元素
     println(list1.filter(s => s >= 2))
+
+    //zip 拉链操作
+    list1.zip(List("a", "b", "c", "d")).foreach(t => {
+      println("zip key:%s  value:%s".format(t._1, t._2))
+    })
+
+    // 通过拉链方式 给每个值进行计数标识
+    list1.zipWithIndex.foreach(t => {
+      println("zipWitchIndex key:%s  value:%s".format(t._1, t._2))
+    })
 
     // 迭代器
     val iterator = list1.iterator
