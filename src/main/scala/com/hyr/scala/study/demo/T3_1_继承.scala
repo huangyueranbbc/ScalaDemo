@@ -59,10 +59,13 @@ object T3_1_继承 {
 
     val superMan = new SuperMan("chaoren", 666, "女", "564600111@qq.com", 1)
     println(superMan)
-    superMan.changeAge(999)
+    superMan.changeAge(1000)
     superMan.levelUp()
     superMan.levelUp()
     superMan.levelUp()
+    superMan.growUp() // 继承得到的方法
+    superMan.growUp()
+    superMan.growUp()
     println(superMan)
 
 

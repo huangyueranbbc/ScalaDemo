@@ -24,6 +24,10 @@ object T11_1_列表 {
     for (i <- list1) {
       println(i)
     }
+
+    val list2 = (4 :: Nil) :+ 5 // :+ 构造list  x :+ y  将y追加到列表的尾部
+    println(list2.foreach(println))
+
     val emptyList1 = Nil
 
     // 列表的操作
@@ -81,6 +85,28 @@ object T11_1_列表 {
     while (iterator.hasNext) {
       println(iterator.next())
     }
+
+    val list3 = List[String]("hello scala", "hello java", "hello spark", "a", "abc")
+
+    // 来一条出一条
+    val mapResult: List[Array[String]] = list3.map(s => {
+      s.split(" ")
+    })
+
+    // 来一条出多条
+    val flatMapResult: List[String] = list3.flatMap(s => {
+      s.split(" ")
+    })
+    mapResult.foreach(
+      arr => arr.foreach {
+        println("新的数组")
+        println
+      }
+    )
+
+    flatMapResult.foreach(
+        println
+    )
   }
 
 }

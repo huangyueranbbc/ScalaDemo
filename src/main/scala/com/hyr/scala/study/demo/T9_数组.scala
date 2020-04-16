@@ -20,6 +20,9 @@ object T9_数组 {
       println(i)
     }
 
+    arr1.foreach(print)
+    println
+
     var arr2 = Array("aa", "bb", "cc")
     println("arr2 len:" + arr2.length)
     for (i <- arr2) {
@@ -62,8 +65,9 @@ object T9_数组 {
 
     val concatArray = Array.concat(myList1, myList2)
     for (i <- concatArray) {
-      println(i)
+      print(i+"\t")
     }
+    println
 
     // 创建区间数组
     val arr4 = Array.range(1, 10, 1)
